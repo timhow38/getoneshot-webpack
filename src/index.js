@@ -17,21 +17,18 @@ const database = getDatabase();
 
 const db = getDatabase();
 //read from users/
+
 const usersRef = ref(db, 'users/');
 const users = onValue(usersRef, (snapshot) => {
     console.log(snapshot.val());
-}
-);
-
-
-
-
-
-
-
+});
 
 
 //Build WebPack
 //https://youtu.be/rQvOAnNvcNQ?list=PLl-K7zZEsYLnfwBe4WgEw9ao0J0N1LYDR&t=435
+
+//node_modules/.bin/webpack
+//serve dist/
+
 
 
