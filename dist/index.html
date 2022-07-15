@@ -4,11 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="/bundle.js"></script>
+    <title>Astagon</title>
+
+    <!-- JS Library -->
+    <script src="./scripts/library/jquery-3-2-2.js"></script>
+    <script src="./scripts/library/jquery-ui.min1-12-1.js"></script>
+    <script src="./scripts/library/kitAwesome.js"></script>
+    <!-- CSS Components -->
+    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/components/console.css">
+    <link rel="stylesheet" href="./styles/components/iframe.css">
+    <link rel="stylesheet" href="./styles/components/panel.css">
+    <link rel="stylesheet" href="./styles/library/jquery-ui-1-12-1.css">
     
 </head> 
 <body>
+    <div id="terminal">
+        <!-- Nav Menu -Console -->
+        <div class="conPrint resiz">
+          <div class="print">
+          </div>
+          <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span>
+          </div>
+        </div>
+        <!-- Nav Menu -Buttons -->
+        <div class="conBar">
+          <button class="conButton" id="conButton1">DND Beyond</button>
+          <button class="conButton" id="conButton2">Owl Bear</button>
+          <button class="conButton" id="conButton3">Change Log</button>
+          <button class="conButton" id="sign-in-button">Login</button>
+          <button class="conButton" id="sign-out-button">Logout</button>
+        </div>
+      </div>
 
+      <!-- Battle Canvas -->
+      <div class="site-wrap">
+        <div class="panel-wrap animate--none">
+          <div class="panel posMiddle" data-x-pos="0"  data-y-pos="0">
+            <div id="root"></div>
+            <div class="panel-content">
+              <span class="panel__nav panel__nav--up js-up">up</span>
+              <span class="panel__nav panel__nav--right-top js-up js-right">up/right</span>
+              <span class="panel__nav panel__nav--left-top js-up js-left">up/left</span>
+              <span class="panel__nav panel__nav--left js-left">left</span>
+              <span class="panel__nav panel__nav--right js-right">right</span>
+              <span class="panel__nav panel__nav--right-down js-down js-right">down/right</span>
+              <span class="panel__nav panel__nav--left-down js-down js-left">down/left</span>
+              <span class="panel__nav panel__nav--down js-down">down</span>
+              <span style="display: none;" class="panel__zoom js-zoom">View All</span>
+              <div class="main-topleft">
+                <h1>ASTAGON</h1>
+                <div class="panel__animation-list">
+                  <h2>Under Twin Stars</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel posUp" data-x-pos="0"  data-y-pos="1">
+            <span class="panel__nav panel__nav--left js-left">left</span>
+            <span class="panel__nav panel__nav--right js-right">right</span>
+            <span class="panel__nav panel__nav--right-down js-down js-right">down/right</span>
+            <span class="panel__nav panel__nav--left-down js-down js-left">down/left</span>
+            <span class="panel__nav panel__nav--down js-down">down</span>
+          </div>
+          <div class="panel posUpLeft" data-x-pos="-1"  data-y-pos="1">
+            <span class="panel__nav panel__nav--right-down js-down js-right">down/right</span>
+            <span class="panel__nav panel__nav--right js-right">right</span>
+            <span class="panel__nav panel__nav--down js-down">down</span>
+          </div>
+          <div class="panel posUpRight" data-x-pos="1"  data-y-pos="1">
+            <span class="panel__nav panel__nav--left-down js-down js-left">down/left</span>
+            <span class="panel__nav panel__nav--left js-left">left</span>
+            <span class="panel__nav panel__nav--down js-down">down</span>
+          </div>
+          <div class="panel posLeft" data-x-pos="-1"  data-y-pos="0">
+            <span class="panel__nav panel__nav--up js-up">up</span>
+            <span class="panel__nav panel__nav--right-top js-up js-right">up/right</span>
+            <span class="panel__nav panel__nav--right js-right">right</span>
+            <span class="panel__nav panel__nav--right-down js-down js-right">down/right</span>
+            <span class="panel__nav panel__nav--down js-down">down</span>
+          </div>
+          <div class="panel posDownLeft" data-x-pos="-1"  data-y-pos="-1">
+            <span class="panel__nav panel__nav--up js-up">up</span>
+            <span class="panel__nav panel__nav--right-top js-up js-right">up/right</span>
+            <span class="panel__nav panel__nav--right js-right">right</span>
+          </div>
+          <div class="panel posDownRight" data-x-pos="1"  data-y-pos="-1">
+            <span class="panel__nav panel__nav--up js-up">up</span>
+            <span class="panel__nav panel__nav--left-top js-up js-left">up/left</span>
+            <span class="panel__nav panel__nav--left js-left">left</span>
+          </div>
+          <div class="panel posRight" data-x-pos="1"  data-y-pos="0">
+            <span class="panel__nav panel__nav--up js-up">up</span>
+            <span class="panel__nav panel__nav--left-top js-up js-left">up/left</span>
+            <span class="panel__nav panel__nav--left js-left">left</span>
+            <span class="panel__nav panel__nav--left-down js-down js-left">down/left</span>
+            <span class="panel__nav panel__nav--down js-down">down</span>
+          </div>
+          <div class="panel posDown" data-x-pos="0"  data-y-pos="-1">
+            <span class="panel__nav panel__nav--up js-up">up</span>
+            <span class="panel__nav panel__nav--left-top js-up js-left">up/left</span>
+            <span class="panel__nav panel__nav--right-top js-up js-right">up/right</span>
+            <span class="panel__nav panel__nav--left js-left">left</span>
+            <span class="panel__nav panel__nav--right js-right">right</span>
+            <span class="panel__nav panel__nav--down js-down">down</span>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="./scripts/app.js"></script>
+    <!-- JS Components -->
+    <script src="./scripts/components/console/conElement.js"></script>
+    <script src="./scripts/components/console/conCommands.js"></script>
+    <script src="./scripts/components/controls/controls.js"></script>
+    <script src="./scripts/components/console/conResiz.js"></script>
+    <!--<script src="./scripts/components/iframes/iframes.js"></script>-->
+    <!-- JS Sort -->
+    <script src="./scripts/sort.js"></script>
+
+
+    <!-- JS Library -->
+    <script src="./scripts/library/toastify-js.js"></script>
+
+        <!-- Web Pack -->
+        <script src="/bundle.js"></script>
 </body>
 </html>

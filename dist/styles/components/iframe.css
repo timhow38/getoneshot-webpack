@@ -1,0 +1,23 @@
+iframe {
+    background-color: #222639;
+    border: 1px #000000 solid;
+    -webkit-box-shadow: inset 0px 0px 5px 2px #000000; 
+    box-shadow: inset 0px 0px 5px 2px #000000;
+    border-radius: 12px;
+    z-index: -1;
+    top: 5px;
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    margin: 3.5em 4em 3.5em 4em;
+  }
+  .owlbear-form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center;
+    padding: 10px;
+    background-color: #222639;
+  }
