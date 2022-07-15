@@ -158,7 +158,6 @@ checkAuthState();
 
 
 document.getElementById('sign-out-button').style.display="none";
-
 //create event listener for sign in button and call googleSignIn function
 document.getElementById("sign-in-button").addEventListener("click", googleSignIn);
 //create event listener for sign out button and call googleSignOut function
@@ -178,7 +177,11 @@ document.getElementById("sign-out-button").addEventListener("click", googleSignO
 //npm install -g serve
 //serve dist/
 
-//Testing Code
-
-//
+// Key Press
+// Toggle Overlay - [Shift + Tab]
+// Toggle Zoom - [ESC], [Enter]
+// Reset Page / Local Storage - [Ctrl + Shift + L]
+// Center Page - [Ctrl + Shift + C]
+// Navigate Site - [Left], [Right], [Up], [Down] Arrows
+// Toggle Console = [~]
 

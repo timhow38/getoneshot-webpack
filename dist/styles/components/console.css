@@ -28,7 +28,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       
     overflow: hidden;
-    min-height: 0vh;
+    min-height: 30vh;
     max-height: calc(100vh - 50px);
   }
   .conBar { 

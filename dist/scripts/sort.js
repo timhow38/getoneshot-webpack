@@ -59,49 +59,6 @@
 
 
 
-//trigger the toast if ctrl shift k is pressed
-$(document).keydown(function(e){
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 75){
-      Toastify({
-    text: "Screen Centered",
-    duration: 3000,
-    newWindow: true,
-    close: true,
-    gravity: "bottom", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    offset: {
-      x: 20, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-      y: 20 // vertical axis - can be a number or a string indicating unity. eg: '2em'
-    },
-    style: {
-      fontFamily: 'nunito',
-      border: "1px solid #fff", // border color
-      borderRadius: "5px", // rounded corner style
-      padding: "3px", // toast padding
-      backgroundColor: "#333", // background color
-      position: "fixed",
-      zIndex: 2,
-    }
-  }).showToast();
-    }
-  }
-  );
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -162,3 +119,18 @@ $(document).keydown(function(e){
     
 //https://www.owlbear.rodeo
 
+
+
+
+
+
+//window.addEventListener("wheel", (e) => {
+//  e.preventDefault();
+
+//  if (e.ctrlKey) {
+//    scale -= e.deltaY * 0.01;
+//  } else {
+//    posX -= e.deltaX * 2;
+//    posY -= e.deltaY * 2;
+//  }
+//});
