@@ -112,6 +112,13 @@ function checkAuthState(){
             document.getElementById("sign-in-button").style.display = "none";
             //show sign out button
             document.getElementById("sign-out-button").style.display = "block";
+            //iframe.contentWindow.document
+            //iframe.contentWindow.document.querySelector('.css-i9e4u2').style.display = "none";
+            //find iframe with id "panel" and add css property to class .css-i9e4u2 in iframe
+            //var iframe = document.getElementById("panel");
+            //var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            //var iframeBody = iframeDoc.querySelector('.css-i9e4u2');
+            //iframeBody.style.display = "none";
             // Panel Change
             $('.panel').each(function(){
                 if(!$(this).hasClass('posMiddle')){

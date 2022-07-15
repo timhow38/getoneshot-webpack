@@ -313,3 +313,8 @@ document.addEventListener('keydown', function(e) {
 
 //by default, hide div #terminal
 $("#terminal").hide();
+
+
+
+
+//

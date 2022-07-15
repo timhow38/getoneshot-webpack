@@ -151,7 +151,7 @@ $(document).keydown(function(e){
         $('.panel').each(function(){
           if(!$(this).hasClass('posMiddle')){
             $(this).append('<iframe name="map" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" allowfullscreen></iframe>');
-            //$(this).find('iframe').attr('id',$(this).attr('class') + '-if');
+            $(this).find('iframe').attr('id',$(this).attr('class') + '-if');
             //give each iframe a class number from 1 to the number of panels
             $(this).find('iframe').addClass('if-' + $(this).attr('class').split(' ')[1]);
           }
