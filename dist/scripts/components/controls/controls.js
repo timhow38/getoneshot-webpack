@@ -7,12 +7,10 @@ var tgl = "on"
         if (e.keyCode == 27) {
             if (tgl == "on") {
                 ToggleON();
-                conOFF();
                 $('.js-zoom').trigger('click');
                 //console.log("Zoomed Out");
             } else if (tgl == "off") {
                 ToggleOFF();
-                conON();
                 zoomIn();
                 //console.log("Zoomed In");
             }
