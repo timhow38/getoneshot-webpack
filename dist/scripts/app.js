@@ -154,11 +154,10 @@ function zoomIn() {
 //Set Toggle Functionality
 function conON() {con = "off";}
 function conOFF() {con = "on";}
-//create an event listener for the key esc (~)
+//create an event listener for the key (~)
 document.addEventListener("keydown", function (e) {
   if (e.keyCode == 192) {
     if (con == "on") {
-      conON();
       //display block #terminal
       $("#terminal").show();
       window.moveUp = function () {};
@@ -173,8 +172,9 @@ document.addEventListener("keydown", function (e) {
       $(".prompt").append(
         "<span class='cursor'>&nbsp;</span>"
       );
+      conON();
     } else if (con == "off") {
-      conOFF();
+      
       //unload function enterCommandLine
       //jquery hide #terminal
       $("#terminal").hide();
@@ -189,6 +189,7 @@ document.addEventListener("keydown", function (e) {
       $(".prompt").append(
         "<span class='cursor'>&nbsp;</span>"
       );
+      conOFF();
     }
   }
 });

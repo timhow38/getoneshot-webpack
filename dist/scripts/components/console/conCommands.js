@@ -116,10 +116,6 @@ const commandHandler = new ConsoleHandler('Unknown Command - Type <strong>"help"
         }
     }
     ),
-
-
-
-
     //create command to show user details
     commandHandler.add({
         name: "<s>user</s>",
@@ -140,8 +136,6 @@ const commandHandler = new ConsoleHandler('Unknown Command - Type <strong>"help"
         }
     }
     ),
-
-
     //create command pos with an argument that runs the functions moveUp and moveDown
     commandHandler.add({
         name: "pos",
@@ -193,7 +187,36 @@ const commandHandler = new ConsoleHandler('Unknown Command - Type <strong>"help"
             }
         }
     }
-    );
-
-
-    //When commands are run also run
+    )
+    //Overlay - Create command to open app
+    commandHandler.add({
+        name: "open",
+        helpMsg: "Opens an app",
+        extendedHelp: "Opens up an application. <br> Usage: open [app name]",
+        //run: (e) => appController.open(e),
+        run: (e) => {
+            if (e) {
+                appController.open(e)
+            } else {
+                return 'Please specify an app to open. Type <strong>"app-list"</strong> for help';
+            }
+        },
+        aliases: ["start", "cd"]
+    }),
+    //Overlay - Create command to close app
+    commandHandler.add({
+        name: "close",
+        helpMsg: "Closes an app",
+        extendedHelp: "Closes up an application. <br> Usage: close [app name]",
+        //run: (e) => appController.close(e),
+        run: (e) => {
+            if (e) {
+                appController.close(e)
+            } else {
+                return 'Please specify an app to close. Type <strong>"app-list"</strong> for help';
+            }
+        },
+        aliases: ["end", "cd.."]
+    }),
+    commandHandler.add({ name: "app-list", helpMsg: "Lists all applications", extendedHelp: "Lists all applications. <br> Usage: app-list-all ", run: () => appController.listApps() }),
+    commandHandler.add({ name: "app-desc", helpMsg: "Get the description of an application", extendedHelp: "Gets the description of an application. <br> Usage: app-desc [app name]", run: (e) => appController.getAppDesc(e) });

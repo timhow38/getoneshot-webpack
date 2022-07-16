@@ -24,12 +24,14 @@ function style01() {
 
   fontFamily = "nunito";
   border = "1px solid yellow"; // border color
-  borderRadius = "5px"; // rounded corner style
+  borderRadius = "8px"; // rounded corner style
   padding = "3px"; // toast padding
-  backgroundColor = "#333"; // background color
+  backgroundColor = "#2a2e35"; // background color
   position = "fixed";
   zIndex = 2;
 }
+
+
 
 //create a function style02 - Action Chat - Player
 function style02() {
