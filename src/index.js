@@ -157,8 +157,6 @@ function checkAuthState(){
 checkAuthState();
 
 
-document.getElementById('sign-out-button').style.display="none";
-//create event listener for sign in button and call googleSignIn function
 document.getElementById("sign-in-button").addEventListener("click", googleSignIn);
 //create event listener for sign out button and call googleSignOut function
 document.getElementById("sign-out-button").addEventListener("click", googleSignOut);

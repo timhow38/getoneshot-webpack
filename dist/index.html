@@ -12,7 +12,6 @@
     <script src="./scripts/library/kitAwesome.js"></script>
     <!-- CSS Components -->
     <link rel="stylesheet" href="./styles/app.css">
-    <link rel="stylesheet" href="./styles/components/console.css">
     <link rel="stylesheet" href="./styles/components/iframe.css">
     <link rel="stylesheet" href="./styles/components/panel.css">
     <link rel="stylesheet" href="./styles/components/overlay.css">
@@ -20,24 +19,7 @@
     
 </head> 
 <body>
-    <div id="terminal">
-        <!-- Nav Menu -Console -->
-        <div class="conPrint resiz">
-          <div class="print">
-          </div>
-          <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span>
-          </div>
-        </div>
-        <!-- Nav Menu -Buttons -->
-        <div class="conBar">
-          <button class="conButton" id="conButton1">DND Beyond</button>
-          <button class="conButton" id="conButton2">Tabletopy</button>
-          <button class="conButton" id="conButton3">Change Log</button>
-          <button class="conButton" id="sign-in-button">Login</button>
-          <button class="conButton" id="sign-out-button">Logout</button>
-        </div>
-    </div>
-    <div id="overlay" class="olControl"></div>
+    <div id="overlay" class="olControl" style="display: none;"></div>
 
       <!-- Battle Canvas -->
       <div class="site-wrap">
@@ -58,6 +40,8 @@
                 <h1>ASTAGON</h1>
                 <div class="panel__animation-list">
                   <h2>Under Twin Stars</h2>
+                  <button id="sign-in-button" class="">Sign In</button>
+                  <button id="sign-out-button" class="">Sign Out</button>
                 </div>
               </div>
             </div>
@@ -118,10 +102,7 @@
 
     <script src="./scripts/app.js"></script>
     <!-- JS Components -->
-    <script src="./scripts/components/console/conElement.js"></script>
-    <script src="./scripts/components/console/conCommands.js"></script>
     <script src="./scripts/components/controls/controls.js"></script>
-    <script src="./scripts/components/console/conResiz.js"></script>
     <!--<script src="./scripts/components/iframes/iframes.js"></script>-->
     <script src="./scripts/components/overlay/overlay.js"></script>
     <!-- JS Sort -->

@@ -66,10 +66,7 @@
 
 
 
-  //disable context menu on iframes
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
+
   //if right click on prevent context menu, then log the panel to the console
   $(document).ready(function(){
     $('.panel').mousedown(function(e){

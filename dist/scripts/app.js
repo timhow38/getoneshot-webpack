@@ -151,57 +151,10 @@ function zoomIn() {
   site.className = site.className.replace(/\s+/g, " ");
 }
 
-//Set Toggle Functionality
-function conON() {con = "off";}
-function conOFF() {con = "on";}
-//create an event listener for the key (~)
-document.addEventListener("keydown", function (e) {
-  if (e.keyCode == 192) {
-    if (con == "on") {
-      //display block #terminal
-      $("#terminal").show();
-      window.moveUp = function () {};
-      window.moveLeft = function () {};
-      window.moveRight = function () {};
-      window.moveDown = function () {};
-      window.zoomIn = function () {};
-      //Remove html from .print and .prompt
-      $(".print").html("");
-      $(".prompt").html("");
-      //<span class="prompt"><span class="cursor">&nbsp;</span></span>
-      $(".prompt").append(
-        "<span class='cursor'>&nbsp;</span>"
-      );
-      conON();
-    } else if (con == "off") {
-      
-      //unload function enterCommandLine
-      //jquery hide #terminal
-      $("#terminal").hide();
-      window.zoomIn = funcHold05;
-      window.moveUp = funcHold01;
-      window.moveLeft = funcHold02;
-      window.moveRight = funcHold03;
-      window.moveDown = funcHold04;
-      //Remove html from .print and .prompt
-      $(".print").html("");
-      $(".prompt").html("");
-      $(".prompt").append(
-        "<span class='cursor'>&nbsp;</span>"
-      );
-      conOFF();
-    }
-  }
-});
 
 //if [enter] is pressed run the function zoomIn
 document.addEventListener("keydown", function (e) {
   if (e.keyCode == 13) {
-    if (con == "on") {
-      zoomIn();
-    }
+    zoomIn();
   }
 });
-
-//by default, hide div #terminal
-$("#terminal").hide();

@@ -7,12 +7,10 @@ var tgl = "on"
         if (e.keyCode == 27) {
             if (tgl == "on") {
                 ToggleON();
-                conOFF();
                 $('.js-zoom').trigger('click');
                 //console.log("Zoomed Out");
             } else if (tgl == "off") {
                 ToggleOFF();
-                conON();
                 zoomIn();
                 //console.log("Zoomed In");
             }
@@ -62,19 +60,4 @@ var tgl = "on"
         }
     });
 
-    //When conButton1 is clicked open a new tab with the url "https://www.google.com" in a new window
-    document.getElementById("conButton1").addEventListener("click", function() {
-        window.open("https://www.dndbeyond.com/campaigns/2447466", "_blank");
-    }
-    );
-    //When conButton1 is clicked open a new tab with the url "https://www.google.com" in a new window
-    document.getElementById("conButton2").addEventListener("click", function() {
-        window.open("https://tabletopy.com/", "_blank");
-    }
-    );
-    //When conButton1 is clicked open a new tab with the url "https://www.google.com" in a new window
-    document.getElementById("conButton2").addEventListener("click", function() {
-        alert("Function Not Added Yet");
-
-    }
-    );
+  
