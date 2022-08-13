@@ -1,6 +1,9 @@
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
+/* Base Page */
+@import url("./components/apps/draggableUI.css");
+
 @font-face {font-family: "DwarvenAxe BB W00 Regular";
   src: url("../fonts/11b9313c156261bdee0bc8b745b34450.eot"); /* IE9*/
   src: url("../fonts/11b9313c156261bdee0bc8b745b34450.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
@@ -17,13 +20,45 @@ body {
   background: rgb(41,62,92);
   background-repeat: repeat;
   color: white;
-  
   letter-spacing: 0.2rem;
   margin: 0;
   overflow: hidden;
-  perspective: 1000px;
-  
+  perspective: 1000px; 
 }
+
+/* Remove Body Scroll */
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+
+@-moz-document url-prefix() {
+  html,
+  body {
+      overflow: hidden !important;
+  }
+}
+
+
+/* Remove Body Text Highlight */
+
+::selection {
+  color: none;
+  background: none;
+}
+
+
+/* For Mozilla Firefox */
+
+::-moz-selection {
+  color: none;
+  background: none;
+}
+
+
 #navmenu {
   display: none;
   position: fixed;
@@ -55,7 +90,7 @@ body {
 }
 
 h1 {
-  font-size: 20vmin;
+  font-size: 15vmin;
   margin: 0;
   font-family:"DwarvenAxe BB W00 Regular";
   text-shadow: 0 1px 0 #707070, 
@@ -72,7 +107,7 @@ h1 {
                0 20px 20px rgba(0,0,0,.15);
 }
 h2 {
-  font-size: 5vmin;
+  font-size: 10vmin;
   font-family:"DwarvenAxe BB W00 Regular";
   text-shadow: 0 1px 0 #ccc, 
               0 2px 0 #c9c9c9,
@@ -86,4 +121,38 @@ h2 {
               0 5px 10px rgba(0,0,0,.25),
               0 10px 10px rgba(0,0,0,.2),
               0 20px 20px rgba(0,0,0,.15);
+}
+
+
+
+
+
+.contextMenu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+}
+
+
+
+.container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }

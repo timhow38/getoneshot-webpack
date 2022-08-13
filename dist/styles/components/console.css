@@ -15,8 +15,8 @@
     grid-template-areas: 
     "conPrint conPrint conPrint"
     "conBar conBar conBar"; 
-      
   }
+
   .resiz{
     border-bottom:3px solid #fff;
   }

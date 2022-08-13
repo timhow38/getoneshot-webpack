@@ -19,7 +19,101 @@
     
 </head> 
 <body>
-    <div id="overlay" class="olControl" style="display: none;"></div>
+    <div id="overlay" class="olControl" style="display: none;">
+        <!-- Menu Right Click-->
+        <div class="contextMenu" id="context-menu">
+          <button id="btnRefresh" type="button">Refresh</button>
+  
+  
+          <!-- Create a dropdown list 
+          <div class="btn-group dropend">
+              <button type="button" class="" data-bs-toggle="dropdown" aria-expanded="false">Applications</button>
+              <ul class="dropdown-menu">
+  
+                  <p class="divider">Open</p>
+                  <div id="openApp"></div>
+                  <p class="divider">Close</p>
+                  <div id="closeApp"></div>
+              </ul>
+          </div>-->
+          <div id="win-toggle"></div>
+      </div>
+      <!-- App Containment -->
+      <div class="pages-stack">
+          <div class="page" id="page-home">
+              <div id="containment-wrap">
+                  <!-- Right Click Menu-->
+                  <div class="content"></div>
+                  <nav id="taskbar-nav" class="navbar navbar-expand" aria-label="Second navbar example">
+                      <div class="container-fluid">
+                          <div class="collapse navbar-collapse" id="navbarsExample02">
+                              <ul id="task-windows" class="navbar-nav me-auto"></ul>
+                          </div>
+                      </div>
+                  </nav>
+                  <div id="draggable-JS-temp01" class="win-prop box-lg-resize-term application-non-drag">
+                      <div class="header">
+                          <div class="sub-menu-title">
+                              <div class="icon"><img class="icon-img" src="/images/icons/sm/temp-sm.png" alt="Card image cap"></div>
+                              <div class="text">Terminal</div>
+                          </div>
+                          <div class="buttons">
+                              <div id="minimize" type="button" class="btn minimize"><i class="fa-regular fa-square-minus"></i></div>
+                              <div id="windowed" type="button" class="btn windowed"><i class="fa-solid fa-minimize"></i></div>
+                              <div id="maximise" type="button" class="btn maximise"><i class="fa-solid fa-maximize"></i></div>
+  
+                              <div id="close" type="button" class="btn close"><i class="fa-regular fa-rectangle-xmark"></i></div>
+                          </div>
+                      </div>
+  
+                      <div class="row">
+                          <div id="terminal">
+                              <div class="print"></div>
+                              <div id="cli" type="text" inputmode="search"><span class="label"></span><span class="prompt"></span></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="draggable-JS-temp02" class="win-prop box-sm-resize application-non-drag">
+                      <div class="header">
+                          <div class="sub-menu-title">
+                              <div class="icon"><img class="icon-img" src="/images/icons/sm/temp-sm.png" alt="Card image cap"></div>
+                              <div class="text">temp02</div>
+                          </div>
+                          <div class="buttons">
+                              <div id="minimize" type="button" class="btn minimize"><i class="fa-regular fa-square-minus"></i></div>
+                              <div id="windowed" type="button" class="btn windowed"><i class="fa-solid fa-minimize"></i></div>
+                              <div id="maximise" type="button" class="btn maximise"><i class="fa-solid fa-maximize"></i></div>
+  
+                              <div id="close" type="button" class="btn close"><i class="fa-regular fa-rectangle-xmark"></i></div>
+                          </div>
+                      </div>
+                      <div class="form sub-folder" id="sub-folder-0">
+  
+                      </div>
+                  </div>
+                  <div id="draggable-js-temp03" class="win-prop box-sm-resize application-non-drag">
+                      <div class="header">
+                          <div class="sub-menu-title">
+                              <div class="icon"><img class="icon-img" src="/images/icons/sm/temp-sm.png" alt="Card image cap"></div>
+                              <div class="text">temp03</div>
+                          </div>
+                          <div class="buttons">
+                              <div id="minimize" type="button" class="btn minimize"><i class="fa-regular fa-square-minus"></i></div>
+  
+                              <div id="windowed" type="button" class="btn windowed"><i class="fa-solid fa-minimize"></i></div>
+                              <div id="maximise" type="button" class="btn maximise"><i class="fa-solid fa-maximize"></i></div>
+  
+                              <div id="close" type="button" class="btn close"><i class="fa-regular fa-rectangle-xmark"></i></div>
+                          </div>
+                      </div>
+                      <div class="form">
+               
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
 
       <!-- Battle Canvas -->
       <div class="site-wrap">
@@ -37,9 +131,9 @@
               <span class="panel__nav panel__nav--down js-down">down</span>
               <span style="display: none;" class="panel__zoom js-zoom">View All</span>
               <div class="main-topleft">
-                <h1>ASTAGON</h1>
+                <h1>Warhorse</h1>
                 <div class="panel__animation-list">
-                  <h2>Under Twin Stars</h2>
+                  <h2>Battlemaps</h2>
                   <button id="sign-in-button" class="">Sign In</button>
                   <button id="sign-out-button" class="">Sign Out</button>
                 </div>
@@ -112,6 +206,14 @@
 
     <!-- JS Library -->
     <script src="./scripts/library/toastify-js.js"></script>
+
+    <script src="./scripts/components/vendor/jquery-1.12.4.js"></script>
+    <script src="./scripts/components/vendor/jquery-ui.js"></script>
+    <!--  -->
+    <script src="./scripts/components/apps/console.js"></script>
+    <script src="./scripts/components/apps/window-controller.js" defer></script>
+    <script src="./scripts/components/apps/console-commands.js"></script>
+    <script src="./scripts/components/apps/taskbar.js"></script>
 
         <!-- Web Pack -->
         <script src="/bundle.js"></script>
