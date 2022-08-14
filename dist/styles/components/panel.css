@@ -1,10 +1,10 @@
-
-
-.site-wrap {
+  .site-wrap {
     transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    
   }
   .site-wrap.show-all {
-    transform: rotatex(32deg) scale(0.3);
+    transform: scale(0.4);
+    /*rotatex(32deg) rotatey(32deg) rotatez(32deg);*/
   }
   .panel-wrap {
     height: 100vh;
@@ -21,10 +21,11 @@
     transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1) 0.3s;
   }
   .panel {
+    background-position: center;
     background-image: 
     conic-gradient(at calc(100% - 1px) calc(100% - 1px),rgba(255, 255, 255, 0.05) 270deg, #0000 0),
     conic-gradient(at calc(100% - 2px) calc(100% - 2px),rgba(255, 255, 255, 0.05) 270deg, #0000 0);
-    background-size: 500px 500px, 50px 50px; /* adjust the size like you want */
+    background-size: 447.5px 443.5px, 49.5px 49.5px;
     height: 100vh;
     position: absolute;
     transition: transform 0.3s cubic-bezier(0.55, 0, 0.1, 1);

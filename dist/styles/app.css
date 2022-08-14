@@ -1,26 +1,17 @@
 /* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 /* Base Page */
 @import url("./components/apps/draggableUI.css");
 
-@font-face {font-family: "DwarvenAxe BB W00 Regular";
-  src: url("../fonts/11b9313c156261bdee0bc8b745b34450.eot"); /* IE9*/
-  src: url("../fonts/11b9313c156261bdee0bc8b745b34450.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("../fonts/11b9313c156261bdee0bc8b745b34450.woff2") format("woff2"), /* chrome、firefox */
-  url("../fonts/11b9313c156261bdee0bc8b745b34450.woff") format("woff"), /* chrome、firefox */
-  url("../fonts/11b9313c156261bdee0bc8b745b34450.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url("../fonts/11b9313c156261bdee0bc8b745b34450.svg#DwarvenAxe BB W00 Regular") format("svg"); /* iOS 4.1- */
-}
-
 * {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 body {
+  font-family: 'Rubik', sans-serif;
   background: rgb(41,62,92);
   background-repeat: repeat;
   color: white;
-  letter-spacing: 0.2rem;
   margin: 0;
   overflow: hidden;
   perspective: 1000px; 
@@ -88,44 +79,6 @@ body {
   justify-content: space-between;
 
 }
-
-h1 {
-  font-size: 15vmin;
-  margin: 0;
-  font-family:"DwarvenAxe BB W00 Regular";
-  text-shadow: 0 1px 0 #707070, 
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25),
-               0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);
-}
-h2 {
-  font-size: 10vmin;
-  font-family:"DwarvenAxe BB W00 Regular";
-  text-shadow: 0 1px 0 #ccc, 
-              0 2px 0 #c9c9c9,
-              0 3px 0 #bbb,
-              0 4px 0 #b9b9b9,
-              0 5px 0 #aaa,
-              0 6px 1px rgba(0,0,0,.1),
-              0 0 5px rgba(0,0,0,.1),
-              0 1px 3px rgba(0,0,0,.3),
-              0 3px 5px rgba(0,0,0,.2),
-              0 5px 10px rgba(0,0,0,.25),
-              0 10px 10px rgba(0,0,0,.2),
-              0 20px 20px rgba(0,0,0,.15);
-}
-
-
-
-
 
 .contextMenu {
   position: absolute;

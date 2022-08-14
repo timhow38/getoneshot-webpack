@@ -1,7 +1,6 @@
 /*
 |*************************************************************************;
 * ScriptName    : Draggable UI
-* ScriptPath    : css/lib-css/draggableUI.css
 |*************************************************************************;
 */
 
@@ -279,16 +278,45 @@
   .navbar {
     bottom: 0;
     width: 100%;
-    height: 3em;
+    height: 40px;
     position: fixed;
     color: rgb(255, 255, 255);
-    background: #fff;
+    background-color: #284b63!important;
+    border-top: 2px rgb(126 126 126) groove;
   
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
   }
+
+  .btn-outline-primary {
+    color: #fff;
+    border: solid 2px #172c39;
+    background-color: #1f3b4e;
+  }
+
+  #taskbar-item button {
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.nav-item {
+  padding-right: 5px;
+}
+.minWindow {
+  margin-right: 10px;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+
+
   /* Right Click Menu */
   .content {
       height: 100vh;
